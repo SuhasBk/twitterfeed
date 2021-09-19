@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <h1>Hi, {{ user.username }}!</h1>
+    <div class="handles">
+        {% if handles %}
+        <ul>
+            {% for handle in handles %}
+                <li id={{handle}} class="username">- <button class="btn btn-outline-danger" onclick="confirmRemoveHandle(this)">{{handle}}</button></li>
+            {% endfor %}
+        </ul>
+        {% else %}
+            <i>You are not following anyone! Add someone to see their tweets!</i>
+        {% endif %}
+        <div>
+            <a href="/addhandle">+ Add Accounts</a>
+        </div>
+    </div>
+    <div id="tweets">
+        {% if handles %}
+            {% for handle in handles %}
+                <a class="twitter-timeline" data-width="400" data-height="500" data-theme="dark" href="https://twitter.com/{{ handle }}?ref_src=twsrc%5Etfw"></a>
+            {% endfor %}
+        {% endif %}
+    </div>
+{% endblock %}

@@ -1,0 +1,40 @@
+.navbar-brand, .navbar-collapse {
+    margin-left: 20px !important;
+    margin-right: 20px !important;  
+}
+
+.container {
+    margin-top: 4%;
+    width: 100%;
+}
+
+.handles {
+    float: right;
+}
+
+.username {
+    list-style: none;
+    margin-top: 10%;
+}
+
+#userResults {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-between;
+}
+
+#userResults > div {
+    height: 450px;
+    width: 300px;
+    padding: 1%;
+    border-color: #1DA1F2;
+    border-width: 3px;
+    border-style: double;
+    box-shadow: 4px 3px 8px 1px #969696;
+    background-color: #969696;
+}
+
+#userResults > div:hover {
+    transform: scale(1.1);
+}
