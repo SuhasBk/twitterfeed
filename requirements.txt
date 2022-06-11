@@ -1,7 +1,6 @@
 django
 tweepy
 gunicorn
-psycopg2
 djangorestframework
 whitenoise
 dj-database-url

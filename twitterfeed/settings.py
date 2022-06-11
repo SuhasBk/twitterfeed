@@ -85,18 +85,18 @@ WSGI_APPLICATION = 'twitterfeed.wsgi.application'
 
 if DEBUG:
     DATABASES = {
-        # 'default': {
-        #     'ENGINE': 'django.db.backends.sqlite3',
-        #     'NAME': BASE_DIR / 'db.sqlite3',
-        # },
         'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'twitterfeed',
-            'USER': 'newuser',
-            'PASSWORD': os.getenv('POSTGRES_SQL_PWD'),
-            'HOST': 'localhost',
-            'PORT': '5432',
-        }
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        },
+        # 'default': {
+        #     'ENGINE': 'django.db.backends.postgresql',
+        #     'NAME': 'twitterfeed',
+        #     'USER': 'newuser',
+        #     'PASSWORD': os.getenv('POSTGRES_SQL_PWD'),
+        #     'HOST': 'localhost',
+        #     'PORT': '5432',
+        # }
     }
 else:
     DATABASES = {
